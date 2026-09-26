@@ -2,7 +2,7 @@
 
 Website for *Approximating the Equilibrium Effects of Informed School Choice* by Claudia Allende, Francisco Gallego, and Christopher Neilson.
 
-Live site: https://www.christopher-neilson.com/informed-school-choice/
+Live site: https://informed-school-choice.github.io/informed-school-choice/
 
 This is a fresh, website-only repository. `dist/` contains the public pages, scripts, styles, figures, papers, and aggregate data needed by the interactive website. The research code, private records, and numerical outputs remain in the separate research repository.
 
