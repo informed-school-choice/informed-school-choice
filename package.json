@@ -1,0 +1,13 @@
+{
+  "name": "informed-school-choice",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Public research companion for the informed school choice paper",
+  "scripts": {
+    "dev": "node serve.mjs",
+    "test": "node verify-site.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

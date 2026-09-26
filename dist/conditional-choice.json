@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "status": "awaiting-model-export",
+  "kind": "conditional-node-choice",
+  "markets": [],
+  "method": "Choice probability conditional on a representative residential node, family type, and hypothetical information state. Full school menus and matched model geometry are required."
+}
+

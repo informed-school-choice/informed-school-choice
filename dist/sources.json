@@ -1,0 +1,100 @@
+{
+  "paper": "Approximating the Equilibrium Effects of Informed School Choice",
+  "authors": [
+    "Claudia Allende",
+    "Francisco Gallego",
+    "Christopher Neilson"
+  ],
+  "version": "September 15, 2026 (Round 3)",
+  "policyUnits": "Standard deviations of normalized school value added",
+  "numericPolicySource": "Manuscript tables; precomputed scenarios, no interpolation or browser equilibrium solver",
+  "rounding": "Headline baseline and +10% cost effects use reported effects; other changes subtract rounded levels.",
+  "mainSupplyAssumptions": "Private-school quality adjusts; tuition, capacities, public-school quality, entry, and exit fixed. Public-response sensitivity relaxes public-school quality only.",
+  "uncertainty": "Main effects propagate treatment-parameter covariance conditional on model and baseline inputs.",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=bxAtTqQ-FVM",
+    "title": "Investigación IEUC: Francisco Gallego",
+    "kind": "Research explainer, not the original RCT treatment video",
+    "primarySource": "https://economia.uc.cl/2020/07/28/la-uc-participa-en-desarrollo-de-herramienta-virtual-para-comparar-colegios-con-informacion-personalizada/"
+  },
+  "sources": [
+    {
+      "source": "Writeup/Round 3/Paper/SchoolChoiceInfoExp_R3.pdf",
+      "asset": "paper.pdf",
+      "bytes": 1378201,
+      "sha256": "68f065b35f9f0b264059adaabf55f35e115997080157374b0592b538ff492019"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/SchoolChoiceInfoExp_R3_OnlineAppendix.pdf",
+      "asset": "appendix.pdf",
+      "bytes": 9118851,
+      "sha256": "6199a80808f8884b458d82b48ffa2eb3feef32a85770eb4dd33f3d901e101457"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Figures/1.png",
+      "asset": "assets/1.png",
+      "bytes": 1119171,
+      "sha256": "dbe2305326fea756c36cf24f66d95c0e5d642a593b3492f210a26476067467cb"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Figures/9.png",
+      "asset": "assets/9.png",
+      "bytes": 1264769,
+      "sha256": "2359898ddeae486a993a608829b1258da989ba329743ef37fde798b03649eb58"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Figures/17.png",
+      "asset": "assets/17.png",
+      "bytes": 729948,
+      "sha256": "d839a5a804d2e6f1d249111f639bfa39b017eea5dbd0bc64ab0ab70d4e3516c8"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Figures/cartilla_back.png",
+      "asset": "assets/cartilla_back.png",
+      "bytes": 115235,
+      "sha256": "babfb06fcd90728f94245cecd28554f7678df10c00a343c91d732cb70cb04bb6"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Figures/cartilla_map.png",
+      "asset": "assets/cartilla_map.png",
+      "bytes": 229182,
+      "sha256": "dea8ab8c873058405d51fcdd43231080b26dbc569ca63196b6d6d76c5987c542"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Tables/CapacityCounterfactualTable.tex",
+      "sha256": "0fc7250f0cdd65a6e8d4938d40437a73f55949c54c40afa0a3ce1afd7be13a19"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Tables/CounterfactualRobustness.tex",
+      "sha256": "2d369cb687d053ac937d02e5fb66cdf4968e11d24af9591f7192a084b146e314"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Tables/TreatmentSummary_Choice.tex",
+      "sha256": "1a5f3e658953232d1d42cd8a058b1fae439b4cc451243b1ee0e4b38e0062fe4b"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Tables/TreatmentSummary_Outcomes.tex",
+      "sha256": "d200db641fd96b4f209eed963a20369234005640007d8242edc5c7d3e589d838"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Sections/SchoolChoiceModel2.tex",
+      "sha256": "9303aa306986cdc9c1104944088eb1bc9e93f14b47c38e6dc60a20fc46974201"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Sections/SettingInterventionData.tex",
+      "sha256": "dbd9a06640034ad730c2176f928fb32a9c2d37abfeb6c9c9fecac7e1463102a8"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Sections/EstimationDetails.tex",
+      "sha256": "ab5e7a8e35109ef0490e950bbc37a72944481b265b1793a7d0b924c1e35c4d02"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Sections/ReducedForm.tex",
+      "sha256": "ad0d38aca83bdaffc875cf9b78af2696306cb864e8961d1c7e4db6873aa76f20"
+    },
+    {
+      "source": "Writeup/Round 3/Paper/Sections/AppendixOnline.tex",
+      "sha256": "221fdc41173b9ffdd3827e9e9763603940b4aab4c6d9fd2f4cfcd67cde13400b"
+    }
+  ]
+}

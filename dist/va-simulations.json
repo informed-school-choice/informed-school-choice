@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "kind": "va-distributions",
+  "status": "awaiting-model-outputs",
+  "cohort": "population",
+  "sourceVersion": "September 2026 manuscript",
+  "units": "SD of normalized school value added",
+  "x": [],
+  "records": [],
+  "provenance": [],
+  "method": {
+    "estimand": "Distribution across simulated families of expected school value added, conditional on the scenario's treatment allocation.",
+    "availability": "The paper reports population means; validated population distribution exports are not yet available. Original experimental-sample figures are provided separately."
+  }
+}

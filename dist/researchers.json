@@ -1,0 +1,112 @@
+{
+  "checkedOn": "2026-09-21",
+  "authors": [
+    {
+      "name": "Claudia Allende",
+      "role": "Assistant Professor of Economics",
+      "affiliation": "Stanford Graduate School of Business",
+      "website": "https://claudiaallende.com/",
+      "universityProfile": "https://www.gsb.stanford.edu/faculty-research/faculty/claudia-allende-santa-cruz",
+      "bio": "Professor Allende is an applied microeconomist who studies how public policy shapes markets where public and private providers compete. Her work focuses on education and draws on industrial organization to examine the effects of subsidies, regulation, and the frictions that influence families’ decisions. She combines administrative records, surveys, and randomized trials to study policy effects in equilibrium. Her broader interests include market design and development economics, with research also spanning health care and transportation. She is a Center Fellow at the Stanford Institute for Economic Policy Research.",
+      "portrait": {
+        "asset": "assets/researchers/claudia-classroom-v2.png",
+        "type": "AI-generated photorealistic classroom scene",
+        "sha256": "66042298fcfa003b582ff01f293205b9b6b65eec56e2a8dbdc6e2a0bc60f1143",
+        "width": 1254,
+        "height": 1254,
+        "alt": "Professor Allende presenting to students in an MBA classroom",
+        "reference": {
+          "asset": "assets/researchers/claudia-allende.jpg",
+          "sourcePage": "https://claudiaallende.com/",
+          "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5d69c28ec858a70001106b0f/1571771701613-Q459VOCK1ZYW2644L4S7/Claudia_Allende-1420_e.jpg",
+          "sha256": "55f0ad25d364b365e12169d19f0dc4f3802330d3ca7afc772e8779489fd66a9e",
+          "retrieved": "2026-09-21T02:54:12Z"
+        }
+      },
+      "paragraphs": [
+        "Professor Allende is an applied microeconomist who studies how public policy shapes markets where public and private providers compete. Her work focuses on education and draws on industrial organization to examine the effects of subsidies, regulation, and the frictions that influence families’ decisions.",
+        "She combines administrative records, surveys, and randomized trials to study policy effects in equilibrium. Her broader interests include market design and development economics, with research also spanning health care and transportation. She is a Center Fellow at the Stanford Institute for Economic Policy Research."
+      ],
+      "themes": [
+        "Industrial organization",
+        "Education",
+        "Market design"
+      ],
+      "biographySources": [
+        "https://claudiaallende.com/",
+        "https://www.gsb.stanford.edu/faculty-research/faculty/claudia-allende-santa-cruz"
+      ],
+      "displayName": "Professor Allende"
+    },
+    {
+      "name": "Francisco Gallego",
+      "role": "Professor of Economics",
+      "affiliation": "Pontificia Universidad Católica de Chile",
+      "website": "https://sites.google.com/view/franciscoagallego",
+      "universityProfile": "https://economia.uc.cl/profesores/francisco-gallego/",
+      "bio": "Professor Gallego studies economic development, with a particular interest in education, information, and the institutions that shape economic outcomes. His work uses empirical methods to evaluate interventions and understand how households and policymakers respond to new information. His research includes school choice and competition in Chile, preschool instruction in Peru, and the effects of information about educational outcomes on voters. His broader interests span political economy, economic history, and labor economics. He holds a PhD in Economics from the Massachusetts Institute of Technology.",
+      "portrait": {
+        "asset": "assets/researchers/francisco-gallego-action-v1.png",
+        "type": "AI-generated action illustration",
+        "sha256": "cfafd96a7316a404c7a8d66183552c9a5063ab5a84421fcd31b90d5d8a71c171",
+        "width": 1254,
+        "height": 1254,
+        "alt": "Professor Gallego presenting research and gesturing toward a projection",
+        "reference": {
+          "asset": "assets/researchers/francisco-gallego.jpg",
+          "sourcePage": "https://economia.uc.cl/profesores/francisco-gallego/",
+          "sourceUrl": "https://economia.uc.cl/wp-content/uploads/2022/08/Francisco-5-1-1.jpg",
+          "sha256": "1e7394d6cdb03f9825d6eca728bb9dfa2577c4ea8e8e80e525d9b49b13964918",
+          "retrieved": "2026-09-21T02:54:14Z"
+        }
+      },
+      "paragraphs": [
+        "Professor Gallego studies economic development, with a particular interest in education, information, and the institutions that shape economic outcomes. His work uses empirical methods to evaluate interventions and understand how households and policymakers respond to new information.",
+        "His research includes school choice and competition in Chile, preschool instruction in Peru, and the effects of information about educational outcomes on voters. His broader interests span political economy, economic history, and labor economics. He holds a PhD in Economics from the Massachusetts Institute of Technology."
+      ],
+      "themes": [
+        "Development economics",
+        "Education",
+        "Political economy"
+      ],
+      "biographySources": [
+        "https://sites.google.com/view/franciscoagallego",
+        "https://economia.uc.cl/profesores/francisco-gallego/"
+      ],
+      "displayName": "Professor Gallego"
+    },
+    {
+      "name": "Christopher Neilson",
+      "role": "Professor of Economics and Global Affairs",
+      "affiliation": "Yale University",
+      "website": "https://www.christopher-neilson.com/",
+      "universityProfile": "https://jackson.yale.edu/directory/christopher-neilson",
+      "bio": "Professor Neilson is an applied microeconomist who studies education markets and policies that expand opportunities to develop human capital. He draws on industrial organization, labor economics, and development economics to examine how policies affect students, families, and education providers. He works with governments across Latin America to design, evaluate, and implement education policies using data and technology. He founded ConsiliumBots to support this work and holds a joint appointment in Yale’s Department of Economics and Jackson School of Global Affairs. He earned his PhD in Economics at Yale.",
+      "portrait": {
+        "name": "Christopher Neilson",
+        "asset": "assets/researchers/christopher-neilson-presenting-v1.jpg",
+        "width": 789,
+        "height": 789,
+        "source": "User-provided photograph",
+        "alt": "Professor Neilson presenting educational markets research and pointing to a map of schools",
+        "type": "Photograph",
+        "sha256": "fc375d7929b06dfff9f5fe210a5522ee68afea03578cdf9907f3f205c952c0af"
+      },
+      "paragraphs": [
+        "Professor Neilson is an applied microeconomist who studies education markets and policies that expand opportunities to develop human capital. He draws on industrial organization, labor economics, and development economics to examine how policies affect students, families, and education providers.",
+        "He works with governments across Latin America to design, evaluate, and implement education policies using data and technology. He founded ConsiliumBots to support this work and holds a joint appointment in Yale’s Department of Economics and Jackson School of Global Affairs. He earned his PhD in Economics at Yale."
+      ],
+      "themes": [
+        "Education markets",
+        "Industrial organization",
+        "Public policy"
+      ],
+      "biographySources": [
+        "https://www.christopher-neilson.com/",
+        "https://jackson.yale.edu/directory/christopher-neilson"
+      ],
+      "displayName": "Professor Neilson"
+    }
+  ],
+  "sourceNote": "Names follow the paper. Current affiliations and research summaries were checked against the authors' personal websites and university profiles linked above."
+}

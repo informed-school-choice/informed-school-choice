@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "sourceVersion": "September 15, 2026 (Round 3)",
+  "sample": "Structural experiment sample",
+  "sampleSize": 815,
+  "modelYear": 2011,
+  "weighting": "Each family receives equal weight within its SEP group.",
+  "estimand": "Distribution across families of model-predicted expected school value added, in normalized VA standard deviations.",
+  "curveMethod": "Published kernel density estimates; baseline bandwidth held fixed across scenarios within each SEP group.",
+  "generator": "Work/Model/Revision/run_stage4_figures.m",
+  "policyControlScope": "These published experiment-sample figures are selected independently from the population policy controls. No distributions for partial take-up, targeted treatment, or cost sensitivities are inferred from population means.",
+  "figures": [
+    {
+      "id": "baseline",
+      "label": "Baseline inequality",
+      "title": "Baseline differences in expected school value added",
+      "caption": "No intervention. The two curves compare SEP and non-SEP families; vertical lines mark group means.",
+      "alt": "Baseline expected school value-added densities: SEP families have a mean of 0.19 SD and non-SEP families 0.47 SD, a gap of 0.28 SD.",
+      "summary": "Baseline mean expected VA is 0.19 SD for SEP families and 0.47 SD for non-SEP families.",
+      "assumptions": "No intervention · school conditions held fixed",
+      "original": "assets/va/baseline.png",
+      "source": {
+        "path": "Writeup/Round 3/Paper/Figures/quality_baseline_sep.png",
+        "sha256": "dd9ab9a047e5630fa0199c38c95ff570e4fcf093b10c17fdb78062b423cbb6e2",
+        "captionPath": "Writeup/Round 3/Paper/Sections/SettingInterventionData.tex",
+        "captionSha256": "a937b53a4f4f390f967fc0e66adc6689710628e21c46b403ceb1ad3c218e1c16",
+        "captionHashEncoding": "UTF-8 with LF newlines"
+      },
+      "image": "assets/va/baseline.png",
+      "assets": [
+        {
+          "asset": "assets/va/baseline.png",
+          "sha256": "dd9ab9a047e5630fa0199c38c95ff570e4fcf093b10c17fdb78062b423cbb6e2",
+          "bytes": 151605
+        }
+      ]
+    },
+    {
+      "id": "demand",
+      "label": "Demand response",
+      "title": "Full information: demand response",
+      "caption": "Solid lines show no treatment; dashed lines show full treatment with school quality and prices fixed. SEP families appear above non-SEP families. Vertical lines mark group means.",
+      "alt": "Expected VA distributions shift right under full treatment. The paper reports a mean increase of 0.225 SD for SEP families and 0.167 SD for non-SEP families.",
+      "summary": "The paper reports gains of 0.225 SD for SEP families and 0.167 SD for non-SEP families in this sample.",
+      "assumptions": "100% take-up among eligible families · fixed quality and prices · no capacity constraints",
+      "original": "assets/va/demand.png",
+      "source": {
+        "path": "Writeup/Round 3/Paper/Figures/quality_density_sep_counterfactual.png",
+        "sha256": "dd0436a0f2bf757ac2b7161a75371d9fcd5db267c47ea5001382a8c11cf8ef22",
+        "captionPath": "Writeup/Round 3/Paper/Sections/CounterFactuals2.tex",
+        "captionSha256": "56f693a7e7875a4a5e32090393c7e60c182e6702c5f1df0449c7327f9316a587",
+        "captionHashEncoding": "UTF-8 with LF newlines"
+      },
+      "image": "assets/va/demand.png",
+      "assets": [
+        {
+          "asset": "assets/va/demand.png",
+          "sha256": "dd0436a0f2bf757ac2b7161a75371d9fcd5db267c47ea5001382a8c11cf8ef22",
+          "bytes": 265705
+        }
+      ]
+    },
+    {
+      "id": "capacity",
+      "label": "Capacity constraints",
+      "title": "Full information with capacity constraints",
+      "caption": "Gray solid lines show no treatment; gray dashed lines show full treatment under free choice; colored solid lines add deferred acceptance with capacity constraints. SEP families appear above non-SEP families.",
+      "alt": "Baseline, demand-only, and capacity-constrained expected VA distributions. With capacity constraints, the mean gain is 0.134 SD for SEP families and 0.092 SD for non-SEP families.",
+      "summary": "With limited seats, the gains are 0.134 SD for SEP families and 0.092 SD for non-SEP families in this sample.",
+      "assumptions": "100% take-up among eligible families · capacity-constrained assignment · fixed school quality",
+      "original": "assets/va/capacity.pdf",
+      "source": {
+        "path": "Writeup/Round 3/Paper/Figures/quality_density_capacity_fig5.pdf",
+        "sha256": "83ba412d32ede8321592d5f87915a84bb3aed171d7089269f5323e6e0cf08ac1",
+        "captionPath": "Writeup/Round 3/Paper/Sections/CounterFactuals2.tex",
+        "captionSha256": "56f693a7e7875a4a5e32090393c7e60c182e6702c5f1df0449c7327f9316a587",
+        "captionHashEncoding": "UTF-8 with LF newlines"
+      },
+      "image": "assets/va/capacity.svg",
+      "assets": [
+        {
+          "asset": "assets/va/capacity.pdf",
+          "sha256": "83ba412d32ede8321592d5f87915a84bb3aed171d7089269f5323e6e0cf08ac1",
+          "bytes": 43737
+        },
+        {
+          "asset": "assets/va/capacity.svg",
+          "sha256": "9568526d767e3e33808482edcad5586c3f451fd1bf2adab4b21455e30959d2be",
+          "bytes": 277812
+        }
+      ]
+    },
+    {
+      "id": "equilibrium",
+      "label": "School-quality response",
+      "title": "Full information with capacity constraints and school responses",
+      "caption": "Gray solid lines show no treatment; gray dashed lines show full treatment with free choice and fixed quality; colored solid lines add capacity-constrained assignment and private-school quality responses. SEP families appear above non-SEP families.",
+      "alt": "Baseline, demand-only, and equilibrium expected VA distributions. With capacity constraints and school-quality responses, the mean gain is 0.257 SD for SEP families and 0.208 SD for non-SEP families.",
+      "summary": "Allowing private-school quality to respond produces gains of 0.257 SD for SEP families and 0.208 SD for non-SEP families in this sample.",
+      "assumptions": "100% take-up among eligible families · capacity constraints · private-school quality response · public-school quality fixed",
+      "original": "assets/va/equilibrium.pdf",
+      "source": {
+        "path": "Writeup/Round 3/Paper/Figures/quality_density_supply_capacity_fig7b.pdf",
+        "sha256": "b1b3eda69f93043bffa629b8b3ba60751e5877e9c92b017cfb68e3d45c53ad8c",
+        "captionPath": "Writeup/Round 3/Paper/Sections/EquilibriumEffects.tex",
+        "captionSha256": "7b92a6ec16b7118903ad73727a892d65c982f0b1b82169fc06fa0f93b9783757",
+        "captionHashEncoding": "UTF-8 with LF newlines"
+      },
+      "image": "assets/va/equilibrium.svg",
+      "assets": [
+        {
+          "asset": "assets/va/equilibrium.pdf",
+          "sha256": "b1b3eda69f93043bffa629b8b3ba60751e5877e9c92b017cfb68e3d45c53ad8c",
+          "bytes": 43703
+        },
+        {
+          "asset": "assets/va/equilibrium.svg",
+          "sha256": "74a7c9d2abe966810cdf021d9f29fcba3c58ee96ff6c936ca86be0e2d6229d88",
+          "bytes": 275840
+        }
+      ]
+    }
+  ]
+}
