@@ -6,8 +6,10 @@ Live site: https://informed-school-choice.github.io/informed-school-choice/
 
 This is a fresh, website-only repository. `dist/` contains the public pages, scripts, styles, figures, papers, and aggregate data needed by the interactive website. The research code, private records, and numerical outputs remain in the separate research repository.
 
-Run `npm run dev` and open http://127.0.0.1:4173 to preview locally. Run `npm test` to check public assets and source hashes. No dependency installation or build step is required.
+Run `npm run dev` and open http://127.0.0.1:4173 to preview locally. Run `npm test` to check public assets, source hashes, privacy boundaries, choice-probability invariants, and experimental-mixture identities. No dependency installation or build step is required.
 
 GitHub Pages publishes `dist/` from the `main` branch. Both the website source and published site are public.
 
 The map shows aggregated residential areas, not family homes or complete choice menus. Family-level choice probabilities remain unavailable until the matched fitted-model inputs are verified. The policy lab displays manuscript-supported scenarios, not a browser-side equilibrium solver.
+
+The representative-area choice interface requires an export with verified fitted-model parity, complete 2011 school menus, matched node geometry, and the restricted two-kappa treatment specification. The validator checks the export's declarations and probability sums; those declarations must be substantiated against the research model before publication. The current public cache is intentionally empty. A representative-area prediction does not need an observed participant-to-home link; the separate observed-family view remains inactive until that link is verified. Do not substitute the sampled destination schools in `markets.json` for complete model menus.
