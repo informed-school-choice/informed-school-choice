@@ -47,16 +47,21 @@ assert.deepEqual(policy.cost10.se, columns(errors, 4));
 for (const key of ['baseline', 'cost10']) {
   assert.equal(policy[key].sourceTable, 'CapacityCounterfactualTable.tex');
   assert.equal(policy[key].sourcePanel, 'A/B');
+  assert.equal(policy[key].includedInCurrentManuscript, true);
+  assert.equal(policy[key].researchSourceCommit, sources.researchSourceCommit);
 }
 
 const robustness = table('CounterfactualRobustness.tex');
 for (const [key, letter] of Object.entries({sepOnly:'B', nonSepOnly:'C', publicResponds:'D', takeup75:'E', takeup50:'F'})) {
-  assert.deepEqual(policy[key].values, rows(panel(robustness, letter)), `${key} must match its own appendix run`);
+  assert.deepEqual(policy[key].values, rows(panel(robustness, letter)), `${key} must match its archived supplemental run`);
   assert.equal(policy[key].se, undefined, 'Do not borrow main-paper standard errors for another run');
   assert.equal(policy[key].sourceTable, 'CounterfactualRobustness.tex');
   assert.equal(policy[key].sourcePanel, letter);
+  assert.equal(policy[key].includedInCurrentManuscript, false);
+  assert.equal(policy[key].researchSourceCommit, sources.archivedSupplementalSource.researchSourceCommit);
+  assert.equal(policy[key].sourceVersion, sources.archivedSupplementalSource.version);
 }
-assert.notDeepEqual(policy.baseline.values, rows(panel(robustness, 'A')), 'Review source notices if the main and appendix benchmarks change');
+assert.notDeepEqual(policy.baseline.values, rows(panel(robustness, 'A')), 'Review source notices if current and archived benchmarks change');
 
 const html = read('index.html');
 const contents = id => html.match(new RegExp(`<strong id="${id}">([^<]+)`))?.[1];
@@ -65,6 +70,7 @@ assert.equal(contents('quality'), policy.baseline.values[0][3].toFixed(3));
 assert.equal(contents('mobile-effect'), `+${policy.baseline.effects[0][3].toFixed(3)} SD`);
 assert.equal(contents('va-mean-after'), policy.baseline.values[0][3].toFixed(3));
 assert.match(html, /differences across these runs do not isolate policy changes/);
+assert.match(html, /archived September supplemental outputs, omitted from the October paper and online appendix/);
 assert.ok(html.includes(sources.canonicalPaperUrl));
 assert.ok(html.includes(sources.canonicalAppendixUrl));
 assert.ok(html.includes(sources.projectUrl));
@@ -74,16 +80,28 @@ const population = JSON.parse(read('va-simulations.json'));
 assert.equal(population.sourceVersion, policy.sourceVersion);
 assert.equal(population.status, 'awaiting-model-outputs');
 assert.equal(population.records.length, 0, 'New distribution exports require a separate model-parity review');
+const distributions = JSON.parse(read('distributions.json'));
+assert.equal(distributions.researchSourceCommit, sources.archivedSupplementalSource.researchSourceCommit);
+assert.equal(distributions.sourceVersion, sources.archivedSupplementalSource.version);
+for (const figure of distributions.figures) {
+  assert.equal(figure.includedInCurrentManuscript, figure.id === 'baseline');
+  assert.equal(figure.source.researchSourceCommit, distributions.researchSourceCommit);
+  if (figure.id !== 'baseline') assert.match(figure.releaseNote, /Not included in the October paper or online appendix/);
+}
 
 // When the research checkout is available, verify the public table snapshots
 // against their pinned Git release, independent of its current working branch.
 const research = path.resolve('../informationExperimentEquilibrium');
 if (existsSync(path.join(research, '.git'))) {
   for (const source of sources.sources.filter(item => item.asset?.startsWith('assets/sources/'))) {
-    const pinned = execFileSync('git', ['-C', research, 'show', `${sources.researchSourceCommit}:${source.source}`]);
+    const pinned = execFileSync('git', ['-C', research, 'show', `${source.researchSourceCommit ?? sources.researchSourceCommit}:${source.source}`]);
     assert.equal(createHash('sha256').update(pinned).digest('hex'), source.sha256, source.source);
     assert.deepEqual(pinned, readFileSync(path.join('dist', source.asset)));
   }
-  console.log('PASS: policy source tables match the pinned research release.');
+  for (const figure of distributions.figures) {
+    const pinned = execFileSync('git', ['-C', research, 'show', `${figure.source.researchSourceCommit}:${figure.source.path}`]);
+    assert.equal(createHash('sha256').update(pinned).digest('hex'), figure.source.sha256, figure.source.path);
+  }
+  console.log('PASS: policy source tables and archived figures match their pinned research releases.');
 }
-console.log('PASS: all policy means, effects, and standard errors match their manuscript tables; defaults and release links agree.');
+console.log('PASS: policy values match the current main table or identified archive; defaults, release links, and archive labels agree.');

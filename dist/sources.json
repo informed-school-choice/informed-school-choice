@@ -7,7 +7,7 @@
   ],
   "version": "October 2026 manuscript",
   "policyUnits": "Standard deviations of normalized school value added",
-  "numericPolicySource": "Main-paper capacity counterfactual table for full take-up and +10% costs; separate online-appendix robustness runs for targeting, partial take-up, and public response. No interpolation or browser equilibrium solver.",
+  "numericPolicySource": "The October manuscript main capacity table supplies full take-up and +10% costs. Partial take-up, targeting, and public response are archived September research-source outputs omitted from the October paper and appendix. No interpolation or browser equilibrium solver.",
   "rounding": "Headline baseline and +10% cost effects use reported effects; other changes subtract rounded levels.",
   "mainSupplyAssumptions": "Private-school quality adjusts; tuition, capacities, public-school quality, entry, and exit fixed. Public-response sensitivity relaxes public-school quality only.",
   "uncertainty": "Main effects propagate treatment-parameter covariance conditional on model and baseline inputs.",
@@ -70,7 +70,10 @@
       "source": "Writeup/Round 3/Paper/Tables/CounterfactualRobustness.tex",
       "sha256": "16000d111bb4a27b12df6c3599e4f78883191d11c4a0190d696b753a7516643c",
       "asset": "assets/sources/CounterfactualRobustness.tex",
-      "bytes": 1709
+      "bytes": 1709,
+      "researchSourceCommit": "0b3f98a8eaa3bc68cad6840386a2a71611d9de1a",
+      "sourceVersion": "September 2026 research-source release",
+      "includedInCurrentManuscript": false
     },
     {
       "source": "Writeup/Round 3/Paper/Tables/TreatmentSummary_Choice.tex",
@@ -108,5 +111,11 @@
   "canonicalAppendixUrl": "https://consiliumbots.github.io/working-papers-cb/AGN_2019/v3/online-appendix.pdf",
   "projectUrl": "https://school-choice-equilibrium-effects-information.org/",
   "nberUrl": "https://doi.org/10.3386/w35837",
-  "scenarioComparability": "The appendix robustness table retains a different full-take-up reference from the main-paper benchmark. Differences between those runs do not isolate policy changes."
+  "scenarioComparability": "Archived September supplemental scenarios use a different full-take-up reference. They are not current-paper estimates, and differences between releases do not isolate policy changes.",
+  "archivedSupplementalSource": {
+    "version": "September 2026 research-source release",
+    "researchSourceCommit": "0b3f98a8eaa3bc68cad6840386a2a71611d9de1a",
+    "includedInCurrentManuscript": false,
+    "publicTableAsset": "assets/sources/CounterfactualRobustness.tex"
+  }
 }

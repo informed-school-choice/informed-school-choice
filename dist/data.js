@@ -65,7 +65,10 @@ window.POLICY_DATA = {
       ]
     ],
     "sourceTable": "CapacityCounterfactualTable.tex",
-    "sourcePanel": "A/B"
+    "sourcePanel": "A/B",
+    "sourceVersion": "October 2026 manuscript",
+    "researchSourceCommit": "0803db2475ed08a49338f3208eb83fec238a50ed",
+    "includedInCurrentManuscript": true
   },
   "takeup75": {
     "title": "Reaching three in four families",
@@ -91,7 +94,10 @@ window.POLICY_DATA = {
       ]
     ],
     "sourceTable": "CounterfactualRobustness.tex",
-    "sourcePanel": "E"
+    "sourcePanel": "E",
+    "sourceVersion": "September 2026 research-source release",
+    "researchSourceCommit": "0b3f98a8eaa3bc68cad6840386a2a71611d9de1a",
+    "includedInCurrentManuscript": false
   },
   "takeup50": {
     "title": "Reaching half of eligible families",
@@ -117,7 +123,10 @@ window.POLICY_DATA = {
       ]
     ],
     "sourceTable": "CounterfactualRobustness.tex",
-    "sourcePanel": "F"
+    "sourcePanel": "F",
+    "sourceVersion": "September 2026 research-source release",
+    "researchSourceCommit": "0b3f98a8eaa3bc68cad6840386a2a71611d9de1a",
+    "includedInCurrentManuscript": false
   },
   "sepOnly": {
     "title": "Target disadvantaged families",
@@ -143,7 +152,10 @@ window.POLICY_DATA = {
       ]
     ],
     "sourceTable": "CounterfactualRobustness.tex",
-    "sourcePanel": "B"
+    "sourcePanel": "B",
+    "sourceVersion": "September 2026 research-source release",
+    "researchSourceCommit": "0b3f98a8eaa3bc68cad6840386a2a71611d9de1a",
+    "includedInCurrentManuscript": false
   },
   "nonSepOnly": {
     "title": "Target other eligible families",
@@ -169,7 +181,10 @@ window.POLICY_DATA = {
       ]
     ],
     "sourceTable": "CounterfactualRobustness.tex",
-    "sourcePanel": "C"
+    "sourcePanel": "C",
+    "sourceVersion": "September 2026 research-source release",
+    "researchSourceCommit": "0b3f98a8eaa3bc68cad6840386a2a71611d9de1a",
+    "includedInCurrentManuscript": false
   },
   "cost10": {
     "title": "When quality is more costly",
@@ -235,7 +250,10 @@ window.POLICY_DATA = {
       ]
     ],
     "sourceTable": "CapacityCounterfactualTable.tex",
-    "sourcePanel": "A/B"
+    "sourcePanel": "A/B",
+    "sourceVersion": "October 2026 manuscript",
+    "researchSourceCommit": "0803db2475ed08a49338f3208eb83fec238a50ed",
+    "includedInCurrentManuscript": true
   },
   "publicResponds": {
     "title": "If public schools also respond",
@@ -261,6 +279,9 @@ window.POLICY_DATA = {
       ]
     ],
     "sourceTable": "CounterfactualRobustness.tex",
-    "sourcePanel": "D"
+    "sourcePanel": "D",
+    "sourceVersion": "September 2026 research-source release",
+    "researchSourceCommit": "0b3f98a8eaa3bc68cad6840386a2a71611d9de1a",
+    "includedInCurrentManuscript": false
   }
 };

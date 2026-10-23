@@ -17,6 +17,7 @@
    if(!figure)throw new Error('Unknown published comparison');
    root.dataset.selectedDistribution=id;
    setText('distribution-view-title',figure.title);
+   setText('distribution-release',figure.releaseNote);
    setText('distribution-assumptions',figure.assumptions);
    setText('distribution-caption',figure.caption);
    setText('distribution-summary',figure.summary);
@@ -27,11 +28,11 @@
    buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.distribution===id)));
   };
   buttons.forEach(button=>{button.disabled=false;button.addEventListener('click',()=>select(button.dataset.distribution));});
-  select('equilibrium');
+  select('baseline');
  }).catch(()=>{
-  error.textContent='The paper figures could not be loaded. You can still read the distributions in the paper.';
+  error.textContent='The figure catalogue could not be loaded. Use the original-figure link above for the baseline image.';
   error.hidden=false;
   image.hidden=true;
-  document.getElementById('distribution-original').href='paper.pdf';
+  document.getElementById('distribution-original').href='assets/va/baseline.png';
  });
 })();
