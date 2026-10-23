@@ -23,11 +23,11 @@ function drawLever(){
  const target=$('lever-options');
  if(state.family==='reach'){
   const index=validFamilies.reach.indexOf(state.scenario);
-  target.innerHTML=`<div class="lever-block"><div class="slider-value"><label for="takeup">Eligible families reached</label><strong id="takeup-output">${[50,75,100][index]}%</strong></div><input type="range" id="takeup" min="0" max="2" step="1" value="${index}" aria-valuetext="${[50,75,100][index]} percent take-up"><div class="range-ticks"><span>50%</span><span>75%</span><span>100%</span></div><p class="help">Move between the three take-up rates simulated in the paper. Higher-education households are not directly treated.</p></div>`;
+  target.innerHTML=`<div class="lever-block"><div class="slider-value"><label for="takeup">Eligible families reached</label><strong id="takeup-output">${[50,75,100][index]}%</strong></div><input type="range" id="takeup" min="0" max="2" step="1" value="${index}" aria-valuetext="${[50,75,100][index]} percent take-up"><div class="range-ticks"><span>50%</span><span>75%</span><span>100%</span></div><p class="help">Select a reported take-up rate. The 50% and 75% scenarios use the appendix robustness runs; 100% shows the main-paper benchmark. Higher-education households are not directly treated.</p></div>`;
   $('takeup').addEventListener('input',e=>{const i=Number(e.target.value);state.scenario=validFamilies.reach[i];$('takeup-output').textContent=[50,75,100][i]+'%';e.target.setAttribute('aria-valuetext',[50,75,100][i]+' percent take-up');render()});
  }else{
   const labels={target:['All eligible families','Disadvantaged (SEP) only','Other eligible families only'],cost:['Baseline costs','Marginal costs +10%'],public:['Private schools respond','Public schools respond too']};
-  const note={target:'Full take-up within the selected group. All other assumptions stay at baseline.',cost:'Raise private schools’ unit cost of quality by 10%, keeping fixed per-student costs unchanged. Demand and capacity bars remain baseline-cost reference points.',public:'A sensitivity exercise that mechanically extends the private-school response rule to public schools.'};
+  const note={target:'Full take-up within the selected group. Targeted scenarios use the appendix robustness runs; the all-eligible setting shows the main-paper benchmark.',cost:'Raise private schools’ unit cost of quality by 10%, keeping fixed per-student costs unchanged. Demand and capacity bars remain baseline-cost reference points.',public:'A sensitivity exercise that mechanically extends the private-school response rule to public schools.'};
   target.innerHTML=`<div class="option-set" role="group" aria-label="${$('policy-family').selectedOptions[0].textContent}">${validFamilies[state.family].map((key,i)=>`<button type="button" data-scenario="${key}" aria-pressed="${state.scenario===key}">${labels[state.family][i]}</button>`).join('')}</div><p class="help">${note[state.family]}</p>`;
   target.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{state.scenario=button.dataset.scenario;drawLever();render()}));
  }
@@ -44,10 +44,11 @@ function chart(){
  $('chart').innerHTML=svg+'</svg>';$('chart').setAttribute('aria-label',stageNames.map((n,i)=>`${n}: ${format(values[i])} SD`).join('; ')+`. Selected: ${stageNames[state.stage]}.`)
 }
 function render(){
- const s=scenario(),v=s.values[state.group],e=effect(),se=(['cost10','publicResponds'].includes(state.scenario)&&state.stage<3?POLICY_DATA.baseline:s).se?.[state.group]?.[state.stage];
+ const s=scenario(),v=s.values[state.group],e=effect(),se=s.se?.[state.group]?.[state.stage];
  $('copy-status').textContent='';
  $('scenario-tag').textContent='MODEL POPULATION · '+s.tag+' · '+groupNames[state.group];$('scenario-heading').textContent=s.title;
  $('effect').innerHTML=signed(e)+'<span> SD</span>';$('mobile-effect').textContent=signed(e)+' SD';$('quality').textContent=format(v[state.stage]);$('baseline').textContent=format(v[0])+' without the intervention';
+ $('policy-source').textContent=s.sourceTable==='CapacityCounterfactualTable.tex'?'Main-paper benchmark, October 2026 manuscript.':'Online-appendix robustness run. Its full-take-up reference differs from the main-paper benchmark; comparisons across those runs do not isolate policy changes.';
  $('effect-note').textContent=(s.effects?'Reported treatment effect':'Difference in rounded quality levels')+(se?' · SE '+format(se)+' SD':' · SE not reported');
  $('stage-help').textContent=({1:'School prices and quality stay fixed; families can choose freely.',2:'Seat limits can bind at popular schools. A deferred-acceptance assignment allocates places; school prices and quality stay fixed.',3:'Seat limits remain, and private schools adjust quality. Public-school behavior follows the selected scenario.'})[state.stage];
  const titles={1:'Information changes families’ choices.',2:'Better-informed demand meets limited seats.',3:'Schools’ response changes the story.'};

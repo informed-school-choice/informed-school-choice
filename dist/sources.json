@@ -5,9 +5,9 @@
     "Francisco Gallego",
     "Christopher Neilson"
   ],
-  "version": "September 15, 2026 (Round 3)",
+  "version": "October 2026 manuscript",
   "policyUnits": "Standard deviations of normalized school value added",
-  "numericPolicySource": "Manuscript tables; precomputed scenarios, no interpolation or browser equilibrium solver",
+  "numericPolicySource": "Main-paper capacity counterfactual table for full take-up and +10% costs; separate online-appendix robustness runs for targeting, partial take-up, and public response. No interpolation or browser equilibrium solver.",
   "rounding": "Headline baseline and +10% cost effects use reported effects; other changes subtract rounded levels.",
   "mainSupplyAssumptions": "Private-school quality adjusts; tuition, capacities, public-school quality, entry, and exit fixed. Public-response sensitivity relaxes public-school quality only.",
   "uncertainty": "Main effects propagate treatment-parameter covariance conditional on model and baseline inputs.",
@@ -21,14 +21,14 @@
     {
       "source": "Writeup/Round 3/Paper/SchoolChoiceInfoExp_R3.pdf",
       "asset": "paper.pdf",
-      "bytes": 1378201,
-      "sha256": "68f065b35f9f0b264059adaabf55f35e115997080157374b0592b538ff492019"
+      "bytes": 897435,
+      "sha256": "26c99794b02e40154a4663c1f97a36f4877cddb14be55f3edcfe35cc03dcc170"
     },
     {
       "source": "Writeup/Round 3/Paper/SchoolChoiceInfoExp_R3_OnlineAppendix.pdf",
       "asset": "appendix.pdf",
-      "bytes": 9118851,
-      "sha256": "6199a80808f8884b458d82b48ffa2eb3feef32a85770eb4dd33f3d901e101457"
+      "bytes": 9483237,
+      "sha256": "1812c5b56e70298a62ccfd28c9e374cc1587d5ee2a471b41d9f4a8181475ac4c"
     },
     {
       "source": "Writeup/Round 3/Paper/Figures/1.png",
@@ -62,39 +62,51 @@
     },
     {
       "source": "Writeup/Round 3/Paper/Tables/CapacityCounterfactualTable.tex",
-      "sha256": "0fc7250f0cdd65a6e8d4938d40437a73f55949c54c40afa0a3ce1afd7be13a19"
+      "sha256": "29e6c62fbaae7ec57089b5420e98d4dbc45cf99801976dad26de31614cf17aac",
+      "asset": "assets/sources/CapacityCounterfactualTable.tex",
+      "bytes": 1600
     },
     {
       "source": "Writeup/Round 3/Paper/Tables/CounterfactualRobustness.tex",
-      "sha256": "2d369cb687d053ac937d02e5fb66cdf4968e11d24af9591f7192a084b146e314"
+      "sha256": "16000d111bb4a27b12df6c3599e4f78883191d11c4a0190d696b753a7516643c",
+      "asset": "assets/sources/CounterfactualRobustness.tex",
+      "bytes": 1709
     },
     {
       "source": "Writeup/Round 3/Paper/Tables/TreatmentSummary_Choice.tex",
-      "sha256": "1a5f3e658953232d1d42cd8a058b1fae439b4cc451243b1ee0e4b38e0062fe4b"
+      "sha256": "89fed2a1e84f7aad7a76f76cb34eec014456f3b408a46cd4dc0468fa6c3d33c8"
     },
     {
       "source": "Writeup/Round 3/Paper/Tables/TreatmentSummary_Outcomes.tex",
-      "sha256": "d200db641fd96b4f209eed963a20369234005640007d8242edc5c7d3e589d838"
+      "sha256": "be0f8fd9e4eccad76f094a8b97107082ba30f82f940f73c0bcf08ebb34a7bf58"
     },
     {
       "source": "Writeup/Round 3/Paper/Sections/SchoolChoiceModel2.tex",
-      "sha256": "9303aa306986cdc9c1104944088eb1bc9e93f14b47c38e6dc60a20fc46974201"
+      "sha256": "0d00b4139bf0bdd786464d327d9c185870c9358426455736df39163baafb0964"
     },
     {
       "source": "Writeup/Round 3/Paper/Sections/SettingInterventionData.tex",
-      "sha256": "dbd9a06640034ad730c2176f928fb32a9c2d37abfeb6c9c9fecac7e1463102a8"
+      "sha256": "4d89650ba468b360606e7bdbc05edc4988231f5c206285596d44915403a858d0"
     },
     {
       "source": "Writeup/Round 3/Paper/Sections/EstimationDetails.tex",
-      "sha256": "ab5e7a8e35109ef0490e950bbc37a72944481b265b1793a7d0b924c1e35c4d02"
+      "sha256": "e15dd49007de2728dfc7faa30c071caa54d5f9ce37bc654a6dbfe5793f2be99b"
     },
     {
       "source": "Writeup/Round 3/Paper/Sections/ReducedForm.tex",
-      "sha256": "ad0d38aca83bdaffc875cf9b78af2696306cb864e8961d1c7e4db6873aa76f20"
+      "sha256": "71fa4a4c72bf949d3bd4510ad0e770d766c90476909b4b47043a87c6503c55af"
     },
     {
       "source": "Writeup/Round 3/Paper/Sections/AppendixOnline.tex",
-      "sha256": "221fdc41173b9ffdd3827e9e9763603940b4aab4c6d9fd2f4cfcd67cde13400b"
+      "sha256": "49db5c18bbe667fb57f00e9bcf9025dd34d0e3261bdc245c5e6b7f0dbffba425"
     }
-  ]
+  ],
+  "researchSourceCommit": "0803db2475ed08a49338f3208eb83fec238a50ed",
+  "researchMergedCommit": "f967f1ee0de91963f4f2c7545cc716652579c6b1",
+  "researchPullRequest": "https://github.com/christopherneilson/informationExperimentEquilibrium/pull/131",
+  "canonicalPaperUrl": "https://consiliumbots.github.io/working-papers-cb/AGN_2019/latest.pdf",
+  "canonicalAppendixUrl": "https://consiliumbots.github.io/working-papers-cb/AGN_2019/v3/online-appendix.pdf",
+  "projectUrl": "https://school-choice-equilibrium-effects-information.org/",
+  "nberUrl": "https://doi.org/10.3386/w35837",
+  "scenarioComparability": "The appendix robustness table retains a different full-take-up reference from the main-paper benchmark. Differences between those runs do not isolate policy changes."
 }
